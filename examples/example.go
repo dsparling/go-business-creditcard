@@ -6,8 +6,8 @@
 package main
 
 import (
-	"fmt"
-	"github.com/dsparling/go-business-creditcard/business/creditcard/creditcard"
+	//"fmt"
+	"github.com/dsparling/go-business-creditcard/business/creditcard"
 )
 
 func main() {
