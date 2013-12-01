@@ -7,8 +7,9 @@ package main
 
 import (
 	//"fmt"
-	//"github.com/dsparling/go-business-creditcard/business/creditcard"
+	"github.com/dsparling/go-business-creditcard/business/creditcard"
 )
 
 func main() {
+  validate("4111111111111111")
 }
