@@ -28,7 +28,7 @@ e.g. on my Mac OS X (64b)
 
 ## Examples
 
-[Example.go][example] is a sort of hello world for go-business-creditcard and should get you started for the barebones necessities of using the package.
+[Example.go](https://github.com/dsparling/go-business-creditcard/blob/master/examples/example.go) is a sort of hello world for go-business-creditcard and should get you started for the barebones necessities of using the package.
 
 	cd examples
 	go run example.go
