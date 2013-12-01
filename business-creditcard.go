@@ -65,6 +65,39 @@ func Cardtype(ccn string) string {
 	return ccType
 }
 
+
+func GenerateLastDigit(ccn string) string {
+    ccn = Clean(ccn)
+	ccnLen := len(ccn)
+
+	if ccnLen == 8 || ccnLen == 9 {
+		fmt.Println("invalid operation")
+		os.Exit(2)
+	}
+
+	sum := 0
+	for idx, _ := range ccn {
+		low := (len(ccn) - 1) - idx
+		subStrChar := ccn[low]
+		subStr := string(subStrChar)
+		subStrInt, err := strconv.Atoi(subStr)
+		if err != nil {
+			// handle error
+			fmt.Println(err)
+			os.Exit(2)
+		}
+		weight := subStrInt * (2 - (idx % 2))
+		if weight < 10 {
+			sum += weight
+		} else {
+			sum += weight - 9
+		}
+	}
+	lastDigit := (10 - sum % 10) % 10
+	lastDigitStr := strconv.Itoa(lastDigit)
+	return lastDigitStr
+}
+
 func Validate(ccn string) bool {
 	ccn = Clean(ccn)
 	ccn = Reverse(ccn)

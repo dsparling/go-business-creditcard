@@ -3,11 +3,9 @@ go-business-creditcard
 
 Validate/generate credit card checksums/names.
 
-The go-business-creditcard package is a simple port of the
+The go-business-creditcard package is a simple port based on the
 [Business::CreditCard](http://search.cpan.org/dist/Business-CreditCard/) Perl module
 by [Ivan Kohler](http://search.cpan.org/~ivan/).
-
-Note - this code is under development and not yet complete.
 
 ## Installation
 
@@ -61,3 +59,8 @@ e.g. on my Mac OS X (64b)
 	fmt.Println(creditcard.Cardtype("201400000000009"))
 	// JCB
 	fmt.Println(creditcard.Cardtype("3530111333300000"))
+
+## GenerateLastDigit
+
+	// Returns '9' - 5276440065421319
+	fmt.Println(creditcard.GenerateLastDigit("5276 4400 6542 131"))

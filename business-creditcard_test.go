@@ -45,3 +45,11 @@ func TestCardype(t *testing.T) {
 		}
 	}
 }
+
+func TestGenerateLastDigit(t *testing.T) {
+	lastDigit := GenerateLastDigit("5276 4400 6542 131")
+
+	if lastDigit != "9" {
+		t.Errorf("last digit [%s]; want [%s]", lastDigit, "9")
+	}
+}

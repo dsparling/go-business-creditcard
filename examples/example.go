@@ -35,4 +35,7 @@ func main() {
 	fmt.Println(creditcard.Cardtype("201400000000009"))
 	// JCB
 	fmt.Println(creditcard.Cardtype("3530111333300000"))
+
+	// Returns '9' - 5276440065421319
+	fmt.Println(creditcard.GenerateLastDigit("5276 4400 6542 131"))
 }
