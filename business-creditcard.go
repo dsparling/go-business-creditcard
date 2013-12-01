@@ -7,9 +7,39 @@ import (
 	"strings"
 )
 
+func Cardtype(ccn string) string {
+	ccn = Clean(ccn)
+	ccnLen := len(ccn)
+
+	if ccnLen == 0 {
+		return ""
+	}
+
+	ccType := "Unknown"
+
+	if strings.HasPrefix(ccn, "51") ||
+		strings.HasPrefix(ccn, "52") ||
+		strings.HasPrefix(ccn, "53") ||
+		strings.HasPrefix(ccn, "54") ||
+		strings.HasPrefix(ccn, "55") {
+		if ccnLen == 16 {
+			ccType = "MasterCard"
+		}
+	} else if strings.HasPrefix(ccn, "4") {
+		if ccnLen == 13 || ccnLen == 16 {
+			ccType = "Visa"
+		}
+	} else if strings.HasPrefix(ccn, "34") ||
+		strings.HasPrefix(ccn, "37") {
+		if ccnLen == 15 {
+			ccType = "AmericanExpress"
+		}
+	}
+	return ccType
+}
+
 func Validate(ccn string) bool {
-	ccn = strings.Replace(ccn, "-", "", -1)
-	ccn = strings.Replace(ccn, " ", "", -1)
+	ccn = Clean(ccn)
 	ccn = Reverse(ccn)
 
 	even := false
@@ -41,6 +71,12 @@ func Validate(ccn string) bool {
 	} else {
 		return false
 	}
+}
+
+func Clean(s string) string {
+	s = strings.Replace(s, "-", "", -1)
+	s = strings.Replace(s, " ", "", -1)
+	return s
 }
 
 func Reverse(s string) string {

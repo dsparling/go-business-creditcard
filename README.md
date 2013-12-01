@@ -42,3 +42,12 @@ e.g. on my Mac OS X (64b)
 	fmt.Println(creditcard.Validate("1111111111111111"))
 	fmt.Println(creditcard.Validate("1111 1111 1111 1111"))
 	fmt.Println(creditcard.Validate("1111-1111-1111-1111"))
+
+## Cardtype
+
+	// Visa
+	fmt.Println(creditcard.Cardtype("4111111111111111"))
+	// MasterCard
+	fmt.Println(creditcard.Cardtype("5555555555554444"))
+	// AmericanExpress
+	fmt.Println(creditcard.Cardtype("378282246310005"))
