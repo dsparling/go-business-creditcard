@@ -2,7 +2,7 @@ package creditcard
 
 //import "fmt"
 
-func validate(ccn string) bool {
+func Validate(ccn string) bool {
     // test
     return true
 }
