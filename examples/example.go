@@ -6,20 +6,20 @@
 package main
 
 import (
-    "fmt"
-    "creditcard"
+	"creditcard"
+	"fmt"
 )
 
 func main() {
-    if creditcard.Validate("4111111111111111") {
-        fmt.Println("Creditcard valid")
-    } else {
-        fmt.Println("Creditcard not valid")
-    }
+	if creditcard.Validate("4111111111111111") {
+		fmt.Println("Creditcard valid")
+	} else {
+		fmt.Println("Creditcard not valid")
+	}
 
-    if creditcard.Validate("1111111111111111") {
-        fmt.Println("Creditcard valid")
-    } else {
-        fmt.Println("Creditcard not valid")
-    }
+	if creditcard.Validate("1111111111111111") {
+		fmt.Println("Creditcard valid")
+	} else {
+		fmt.Println("Creditcard not valid")
+	}
 }
