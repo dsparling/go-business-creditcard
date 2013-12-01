@@ -27,7 +27,7 @@ e.g. on my Mac OS X (64b)
 
 ## examples
 
-[example.go][example] is a sort of hello world for go-business-creditcar and should get you started for the barebones necessities of using the package.
+[Example.go][example] is a sort of hello world for go-business-creditcard and should get you started for the barebones necessities of using the package.
 
 	cd examples
 	go run example.go
