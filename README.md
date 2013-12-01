@@ -11,7 +11,6 @@ Note - this code is under development and not yet complete.
 
 go-business-creditcard is built using the Go tool. The tool assumes the code will be in a folder $GOPATH/src/go-business-creditcard.
 
-
 	cd $GOPATH/src
 	git clone git://github.com/dsparling/go-business-creditcard creditcard
 	cd creditcard
@@ -31,3 +30,11 @@ e.g. on my Mac OS X (64b)
 
 	cd examples
 	go run example.go
+
+## Validate
+
+	if creditcard.Validate("4111111111111111") {
+	    fmt.Println("Creditcard valid")
+	} else {
+	    fmt.Println("Creditcard not valid")
+	}
