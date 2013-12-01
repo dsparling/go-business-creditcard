@@ -4,9 +4,12 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func Validate(ccn string) bool {
+	ccn = strings.Replace(ccn, "-", "", -1)
+	ccn = strings.Replace(ccn, " ", "", -1)
 	ccn = Reverse(ccn)
 
 	even := false

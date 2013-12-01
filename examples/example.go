@@ -11,15 +11,13 @@ import (
 )
 
 func main() {
-	if creditcard.Validate("4111111111111111") {
-		fmt.Println("Creditcard valid")
-	} else {
-		fmt.Println("Creditcard not valid")
-	}
+	// true
+	fmt.Println(creditcard.Validate("4111111111111111"))
+	fmt.Println(creditcard.Validate("4111 1111 1111 1111"))
+	fmt.Println(creditcard.Validate("4111-1111-1111-1111"))
 
-	if creditcard.Validate("1111111111111111") {
-		fmt.Println("Creditcard valid")
-	} else {
-		fmt.Println("Creditcard not valid")
-	}
+	// false
+	fmt.Println(creditcard.Validate("1111111111111111"))
+	fmt.Println(creditcard.Validate("1111 1111 1111 1111"))
+	fmt.Println(creditcard.Validate("1111-1111-1111-1111"))
 }

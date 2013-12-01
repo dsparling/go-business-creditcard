@@ -7,7 +7,7 @@ by [Ivan Kohler](http://search.cpan.org/~ivan/).
 
 Note - this code is under development and not yet complete.
 
-## get, and install, go-business-creditcard
+## Installation
 
 go-business-creditcard is built using the Go tool. The tool assumes the code will be in a folder $GOPATH/src/go-business-creditcard.
 
@@ -20,11 +20,11 @@ Confirm the install has created redis.a in your $GOPATH/pkg/<arch> folder:
 
 	ls -l $GOPATH/pkg/"$GOOS"_"$GOARCH"/creditcard.a
 
-e.g. on my Mac OS X (64b) 
+e.g. on my Mac OS X (64b)
 
 	ls -l <my-gopath>/pkg/darwin_amd64
 
-## examples
+## Examples
 
 [Example.go][example] is a sort of hello world for go-business-creditcard and should get you started for the barebones necessities of using the package.
 
