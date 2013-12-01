@@ -27,4 +27,12 @@ func main() {
 	fmt.Println(creditcard.Cardtype("5555555555554444"))
 	// AmericanExpress
 	fmt.Println(creditcard.Cardtype("378282246310005"))
+	// DinersClub/Carteblanche
+	fmt.Println(creditcard.Cardtype("30569309025904"))
+	// Discover
+	fmt.Println(creditcard.Cardtype("6011111111111117"))
+	// EnRoute
+	fmt.Println(creditcard.Cardtype("201400000000009"))
+	// JCB
+	fmt.Println(creditcard.Cardtype("3530111333300000"))
 }

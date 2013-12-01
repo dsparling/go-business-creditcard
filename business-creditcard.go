@@ -34,6 +34,33 @@ func Cardtype(ccn string) string {
 		if ccnLen == 15 {
 			ccType = "AmericanExpress"
 		}
+	 } else if strings.HasPrefix(ccn, "300") ||
+			strings.HasPrefix(ccn, "301") ||
+			strings.HasPrefix(ccn, "302") ||
+			strings.HasPrefix(ccn, "303") ||
+			strings.HasPrefix(ccn, "304") ||
+			strings.HasPrefix(ccn, "305") ||
+			strings.HasPrefix(ccn, "36") ||
+			strings.HasPrefix(ccn, "38") {
+		if ccnLen == 14 {
+			ccType = "DinersClub/Carteblanche"
+		}
+	} else if strings.HasPrefix(ccn, "6011") {
+		if ccnLen == 16 {
+			ccType = "Discover"
+		}
+	} else if strings.HasPrefix(ccn, "2014") ||
+			strings.HasPrefix(ccn, "2149") {
+		ccType = "enRoute"
+	} else if strings.HasPrefix(ccn, "3") {
+		if ccnLen == 16 {
+			ccType = "JCB"
+		}
+	} else if strings.HasPrefix(ccn, "2131") ||
+			strings.HasPrefix(ccn, "1800") {
+		if ccnLen == 15 {
+			ccType = "JCB"
+		}
 	}
 	return ccType
 }
