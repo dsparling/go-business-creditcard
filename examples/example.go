@@ -6,7 +6,7 @@
 package main
 
 import (
-	"creditcard"
+	"github.com/dsparling/go-business-creditcard"
 	"fmt"
 )
 
